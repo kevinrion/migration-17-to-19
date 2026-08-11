@@ -43,15 +43,15 @@ function App() {
           </header>
           <main className="app-main">
             <Routes>
-              <Route exact path="/" component={Home} />
-              <Route path="/contact" component={Contact} />
-              <Route path="/profile" component={Profile} />
-              <Route path="/tasks" component={Tasks} />
-              <Route path="/search" component={Search} />
-              <Route path="/notes" component={Notes} />
-              <Route path="/activity" component={Activity} />
-              <Route path="/team" component={Team} />
-              <Route path="/help" component={Help} />
+              <Route path="/" element={<Home />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/tasks" element={<Tasks />} />
+              <Route path="/search" element={<Search />} />
+              <Route path="/notes" element={<Notes />} />
+              <Route path="/activity" element={<Activity />} />
+              <Route path="/team" element={<Team />} />
+              <Route path="/help" element={<Help />} />
             </Routes>
           </main>
           <footer className="app-footer">
