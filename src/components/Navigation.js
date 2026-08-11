@@ -36,7 +36,7 @@ function Navigation({ onNavigate }) {
             key={link.to}
             end={link.end}
             to={link.to}
-            activeClassName="active"
+            className={({ isActive }) => (isActive ? 'active' : undefined)}
             onClick={onNavClick}
             style={isHome ? {} : { padding: '8px 16px' }}
           >
