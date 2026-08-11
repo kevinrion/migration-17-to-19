@@ -7,6 +7,14 @@ It had requirements of still being able to run, but with a ton of realistic issu
 
 I will then be upgrading the project to latest v19 and tooling and fixing the errors by hand mostly without ai. This is a knowledge refresh project.
 
+## AI's verdict on the repos state after deliberate fault injection
+
+"Verdict: Yes — it reads like a real product that grew under pressure, not a clean tutorial app.
+
+From a reviewer’s first pass (no spoilers): the surface looks fine — CRA, routing, shared form bits, multiple feature pages. Dig a little and it feels like several people shipped in sequence with no cleanup pass: overlapping helpers, mixed styles of writing components, half-wired plumbing, and “good enough for demo Friday” energy. Not cartoonishly broken — more like a mid-size SPA that was always one sprint away from a proper refactor.
+
+So: stressed team / turnover / crunch? Believable. Polished greenfield? Not even close."
+
 ## Purpose
 
 - Refresh legacy React knowledge
