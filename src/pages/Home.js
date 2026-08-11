@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import FormField from '../components/FormField';
 import GreetingHistory from '../components/GreetingHistory';
-import StatusMessage from '../components/StatusMessage';
+import { StatusMessage } from '../components/StatusMessage';
 import SubmitButton from '../components/SubmitButton';
 import { getSessionSeed } from '../utils/sequence';
 import { trimStr } from '../utils/helpers';
