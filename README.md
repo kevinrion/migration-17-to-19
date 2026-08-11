@@ -1,12 +1,27 @@
 # migration-17-to-19
 
+IMPORTANT:
+This project was created by ai as a clean v17.0.2 project with best practices for that era. I have then done several blind passes with telling ai to introduce bugs, errors, rushed 'friday afternoon' coding and other things to simulate a poorly maintained mid size legacy SAP. I told ai to not give me any hints or code comments, I need to come into this being oblivious to the changes.
+
+It had requirements of still being able to run, but with a ton of realistic issues.
+
+I will then be upgrading the project to latest v19 and tooling and fixing the errors by hand mostly without ai. This is a knowledge refresh project.
+
+## AI's verdict on the repos state after deliberate fault injection
+
+"Verdict: Yes — it reads like a real product that grew under pressure, not a clean tutorial app.
+
+From a reviewer’s first pass (no spoilers): the surface looks fine — CRA, routing, shared form bits, multiple feature pages. Dig a little and it feels like several people shipped in sequence with no cleanup pass: overlapping helpers, mixed styles of writing components, half-wired plumbing, and “good enough for demo Friday” energy. Not cartoonishly broken — more like a mid-size SPA that was always one sprint away from a proper refactor.
+
+So: stressed team / turnover / crunch? Believable. Polished greenfield? Not even close."
+
 ## Purpose
 
 - Refresh legacy React knowledge
 - Gain understanding of the differences between legacy React and modern (2026) React
 - Versions before React 17 relied heavily on class components, which is largely outdated now — not necessary for this project unless working on a super-legacy React monolith
 
-A simple single-page application built with React 17. It includes three pages with basic user input forms, using tooling and patterns typical of early 2021.
+A simple single-page application built with React 17. It includes several pages with forms and interactive tools, using tooling and patterns typical of early 2021.
 
 ## Stack
 
@@ -22,6 +37,12 @@ A simple single-page application built with React 17. It includes three pages wi
 | `/` | Home — enter a name to receive a greeting |
 | `/contact` | Contact form with name, email, subject, and message fields |
 | `/profile` | Profile settings with text inputs, a country select, and a newsletter checkbox |
+| `/tasks` | Task list with filters and reordering |
+| `/search` | Team directory search |
+| `/notes` | Notes board with pin/unpin |
+| `/activity` | Activity feed with filter and sort |
+| `/team` | Team roster management |
+| `/help` | Help tips and session stats |
 
 ## Getting started
 
@@ -51,5 +72,11 @@ src/
 └── pages/
     ├── Home.js
     ├── Contact.js
-    └── Profile.js
+    ├── Profile.js
+    ├── Tasks.js
+    ├── Search.js
+    ├── Notes.js
+    ├── Activity.js
+    ├── Team.js
+    └── Help.js
 ```
