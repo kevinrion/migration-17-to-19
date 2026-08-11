@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import VisitTracker from './components/VisitTracker';
-import AppProvider from './context/AppContext';
+import { AppProvider } from './context/AppContext';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Profile from './pages/Profile';
