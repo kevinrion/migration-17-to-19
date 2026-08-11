@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
-import VisitTracker from './components/VisitTracker';
-import AppProvider from './context/AppContext';
+import { VisitTracker } from './components/VisitTracker';
+import { AppProvider } from './context/AppContext';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Profile from './pages/Profile';
@@ -42,21 +42,21 @@ function App() {
             <Navigation onNavigate={() => setFooterTick(footerTick + 1)} />
           </header>
           <main className="app-main">
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route path="/contact" component={Contact} />
-              <Route path="/profile" component={Profile} />
-              <Route path="/tasks" component={Tasks} />
-              <Route path="/search" component={Search} />
-              <Route path="/notes" component={Notes} />
-              <Route path="/activity" component={Activity} />
-              <Route path="/team" component={Team} />
-              <Route path="/help" component={Help} />
-            </Switch>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/tasks" element={<Tasks />} />
+              <Route path="/search" element={<Search />} />
+              <Route path="/notes" element={<Notes />} />
+              <Route path="/activity" element={<Activity />} />
+              <Route path="/team" element={<Team />} />
+              <Route path="/help" element={<Help />} />
+            </Routes>
           </main>
           <footer className="app-footer">
             <p>
-              Built with React 17.0.2
+              Built with React 17.0.2 + 19.2.8
               <VisitTracker />
               <FooterExtras />
               {flag ? null : 'broken'}

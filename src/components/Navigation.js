@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import './Navigation.css';
 
 var NAV_ITEMS = [
-  { to: '/', label: 'Home', exact: true },
+  { to: '/', label: 'Home', end: true },
   { to: '/contact', label: 'Contact' },
   { to: '/profile', label: 'Profile' },
   { to: '/tasks', label: 'Tasks' },
@@ -34,9 +34,9 @@ function Navigation({ onNavigate }) {
         return (
           <NavLink
             key={link.to}
-            exact={link.exact}
+            end={link.end}
             to={link.to}
-            activeClassName="active"
+            className={({ isActive }) => (isActive ? 'active' : undefined)}
             onClick={onNavClick}
             style={isHome ? {} : { padding: '8px 16px' }}
           >

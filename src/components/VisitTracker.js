@@ -1,24 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import { useContext } from 'react';
+import { AppContext } from '../context/AppContext';
 
-class VisitTracker extends React.Component {
-  componentDidMount() {
-    this.context.incrementVisit();
-  }
-
-  render() {
-    return (
-      <span className="visit-tracker">
-        {this.context.appLabel} — visits: {this.context.visitCount}
-      </span>
-    );
-  }
+export function VisitTracker ({ children }) {
+  const { appLabel, visitCount } = useContext(AppContext);
+  return (
+    <span className="visit-tracker">
+      {AppContext.appLabel} — visits: {AppContext.visitCount}
+    </span>
+  );
 }
-
-VisitTracker.contextTypes = {
-  visitCount: PropTypes.number,
-  appLabel: PropTypes.string,
-  incrementVisit: PropTypes.func,
-};
-
-export default VisitTracker;
