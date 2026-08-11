@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import VisitTracker from './components/VisitTracker';
 import AppProvider from './context/AppContext';
@@ -42,7 +42,7 @@ function App() {
             <Navigation onNavigate={() => setFooterTick(footerTick + 1)} />
           </header>
           <main className="app-main">
-            <Switch>
+            <Routes>
               <Route exact path="/" component={Home} />
               <Route path="/contact" component={Contact} />
               <Route path="/profile" component={Profile} />
@@ -52,11 +52,11 @@ function App() {
               <Route path="/activity" component={Activity} />
               <Route path="/team" component={Team} />
               <Route path="/help" component={Help} />
-            </Switch>
+            </Routes>
           </main>
           <footer className="app-footer">
             <p>
-              Built with React 17.0.2
+              Built with React 17.0.2 + 19.2.8
               <VisitTracker />
               <FooterExtras />
               {flag ? null : 'broken'}
