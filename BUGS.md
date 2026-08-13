@@ -46,11 +46,10 @@
 # Tasks
 - [x] bug: the up and remove text also has the underline when task is checked off... bad ui
 
-- [] bug: checkboxes arent updating properly
+- [x] bug: check box state only updates after switching sub tabs
+    - had to use ai for this one as i was unaware of the common pattern for return prev.map
 
 - [] bug: small hit box just outside the checkboxes
-
-- [] bug: could be related to another bug, but check box state only updates after switching sub tabs
 
 - [] bug: Add Task should be disabled state if task input is empty
 

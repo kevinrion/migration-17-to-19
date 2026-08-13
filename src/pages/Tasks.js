@@ -21,8 +21,12 @@ function Tasks() {
   }
 
   function toggleItem(index) {
-    items[index].done = !items[index].done;
-    setItems(items);
+    setItems(function (prev) {
+      return prev.map(function (item, i) {
+        if (i !== index) return item;
+        return { ...item, done: !item.done };
+      });
+    });
   }
 
   function removeItem(index) {
