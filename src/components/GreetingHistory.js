@@ -1,6 +1,6 @@
 import React from 'react';
 
-function GreetingHistory({ items }) {
+function GreetingHistory({ items, onRemove }) {
   if (!items || items.length === 0) {
     return null;
   }
@@ -12,12 +12,12 @@ function GreetingHistory({ items }) {
           return null;
         }
         return (
-          <li key={index}>
+          <li key={item.id}>
             {item.text}
             <button
               type="button"
               className="btn btn-secondary btn-small"
-              onClick={item.onRemove}
+              onClick={() => onRemove(item.id)}
             >
               Remove
             </button>

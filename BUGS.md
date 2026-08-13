@@ -16,7 +16,8 @@
 - issues left: 36
 
 # Home
-- [] bug: when several greetings are displayed, the deletion only works correctly deleting strictly latest to oldest. If I start deleting greetings anywhere else in the stack, eventually there are orphaned entries left which can't be deleted, the UI breaks.
+- [x] bug: when several greetings are displayed, the deletion only works correctly deleting strictly latest to oldest. If I start deleting greetings anywhere else in the stack, eventually there are orphaned entries left which can't be deleted, the UI breaks.
+    - FIXED: by learning about useEffect, props, parents etc, and a little nudging from ai. I also spotted an ID issue by myself, you need ID if the greetings will be reordered at some point.
 
 # Contact
 - [] bug: draft saved happens on page load... unsure if bug, but I would not save a draft if just loaded this page with empty fields.

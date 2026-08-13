@@ -56,29 +56,32 @@ function Home() {
     var trimmed = name.trim();
     if (trimmed) {
       var msg = 'Hello, ' + trimmed + '! Welcome to this React 17 app.';
-      console.log('greeting submitted:', msg, temp);
+
       setGreeting(msg);
       setHistory(function (prev) {
         return prev.concat([
           {
+            id: crypto.randomUUID(),
             text: msg,
-            onRemove: function () {
-              setHistory(function (current) {
-                return current.filter(function (_, i) {
-                  return i !== prev.length;
-                });
-              });
-            },
           },
         ]);
       });
     }
+
   }
 
   function handleReset() {
     setName('');
     setGreeting('');
     setErrorMsg('');
+  }
+
+  function handleRemove (id) {
+    setHistory(function (current) {
+      return current.filter(function (item) {
+        return item.id !== id;
+      });
+    });
   }
 
   // function handleSubmitOld(e) {
@@ -121,7 +124,7 @@ function Home() {
       {history.length > 0 && (
         <div className="result-box">
           <p><strong>Recent greetings</strong></p>
-          <GreetingHistory items={history} />
+          <GreetingHistory items={history} onRemove={handleRemove}/>
         </div>
       )}
     </div>
