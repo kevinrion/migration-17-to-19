@@ -44,11 +44,11 @@
 - [] bug: country dropdown has duplicate entries
 
 # Tasks
-- [] bug: checkboxes arent working
+- [x] bug: the up and remove text also has the underline when task is checked off... bad ui
+
+- [] bug: checkboxes arent updating properly
 
 - [] bug: small hit box just outside the checkboxes
-
-- [] bug: the up and remove text also has the underline when task is checked off... bad ui
 
 - [] bug: could be related to another bug, but check box state only updates after switching sub tabs
 

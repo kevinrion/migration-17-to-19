@@ -168,7 +168,7 @@
   gap: 6px;
 }
 
-.item-done span {
+.item-done label span {
   text-decoration: line-through;
   color: #888;
 }
